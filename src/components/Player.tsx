@@ -1,7 +1,15 @@
 'use client';
 
 import React from 'react';
+import { useMugicWebSocket } from '~/hooks/useMugicWebSocket';
 
 export const Player: React.FC = () => {
-	return <div>Player...</div>;
+	const mugic = useMugicWebSocket();
+
+	return (
+		<>
+			<div>Player...</div>
+			<button onClick={mugic.test}>Test</button>
+		</>
+	);
 };

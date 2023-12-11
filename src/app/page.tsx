@@ -1,4 +1,5 @@
 import { currentUser } from '@clerk/nextjs';
+import { Player } from '~/components/Player';
 
 const Home = async () => {
 	const user = await currentUser();
@@ -6,6 +7,7 @@ const Home = async () => {
 	return (
 		<>
 			<h1>Hello Mundo!</h1>
+			<Player />
 		</>
 	);
 };
