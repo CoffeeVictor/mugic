@@ -17,7 +17,7 @@ export const RoomCard: React.FC<RoomCardProps> = (props) => {
 
 export const CreateRoomCard: React.FC = () => {
 	return (
-		<Card>
+		<Card maxW={'md'}>
 			<CardHeader>
 				<Heading>Create a new room</Heading>
 			</CardHeader>
