@@ -11,7 +11,7 @@ const Home = async () => {
 	return (
 		<>
 			<NavBar user={user} />
-			<h1>Hello Mundo!</h1>
+			<h1 className='font-bold underline'>Hello Mundo!</h1>
 			<Player />
 		</>
 	);

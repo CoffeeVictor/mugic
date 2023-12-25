@@ -1,12 +1,8 @@
-import { Flex, Heading, Text } from '@chakra-ui/react';
-
 export const Homepage = () => {
 	return (
-		<Flex w={'100vw'} flexDir={'column'} p={3}>
-			<Heading>Helcome to Mugic!</Heading>
-			<Text>
-				Enhance your online RPG experience with easy audio controls.
-			</Text>
-		</Flex>
+		<div className='w-100 min-h-dvh flex flex-col px-80'>
+			<h1 className='text-bold underline'>Helcome to Mugic!</h1>
+			<p>Enhance your online RPG experience with easy audio controls.</p>
+		</div>
 	);
 };

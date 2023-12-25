@@ -1,3 +1,4 @@
+import '../styles/globals.css';
 import { fonts } from './fonts';
 import { Providers } from './providers';
 
