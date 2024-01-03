@@ -6,7 +6,10 @@ module.exports = {
 			fontFamily: {
 				sans: ['var(--font-rubik)'],
 			},
+			gridTemplateColumns: {
+				'auto-fill-18': 'repeat(auto-fill, 18rem)',
+			},
 		},
 	},
-	plugins: [],
+	plugins: [require('daisyui')],
 };

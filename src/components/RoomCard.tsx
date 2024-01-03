@@ -1,4 +1,3 @@
-import { Card, CardHeader, Heading } from '@chakra-ui/react';
 import React, { type PropsWithChildren } from 'react';
 
 type RoomCardProps = PropsWithChildren & {
@@ -9,18 +8,26 @@ export const RoomCard: React.FC<RoomCardProps> = (props) => {
 	const { name } = props;
 
 	return (
-		<Card>
-			<CardHeader>{name}</CardHeader>
-		</Card>
+		<div className='card glass w-72'>
+			<div className='card-body'>
+				<h2 className='card-title'>{name}</h2>
+				<div className='card-actions justify-center'>
+					<button className='btn btn-primary'>Join</button>
+				</div>
+			</div>
+		</div>
 	);
 };
 
 export const CreateRoomCard: React.FC = () => {
 	return (
-		<Card maxW={'md'}>
-			<CardHeader>
-				<Heading>Create a new room</Heading>
-			</CardHeader>
-		</Card>
+		<div className='card glass w-72'>
+			<div className='card-body'>
+				<h2 className='card-title'>Create a new Room?</h2>
+				<div className='card-actions justify-center'>
+					<button className='btn btn-primary'>Create</button>
+				</div>
+			</div>
+		</div>
 	);
 };

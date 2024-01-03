@@ -1,16 +1,14 @@
-import { auth } from '@clerk/nextjs';
+import { currentUser } from '@clerk/nextjs';
 import { Homepage } from '~/components/Home';
-import { NavBar } from '~/components/NavBar';
 import { Player } from '~/components/Player';
 
 const Home = async () => {
-	const { user } = auth();
+	const user = await currentUser();
 
 	if (!user) return <Homepage />;
 
 	return (
 		<>
-			<NavBar user={user} />
 			<h1 className='font-bold underline'>Hello Mundo!</h1>
 			<Player />
 		</>
