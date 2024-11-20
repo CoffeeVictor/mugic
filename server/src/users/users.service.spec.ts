@@ -24,7 +24,7 @@ describe('UsersService', () => {
 		expect(usersService.findByID).toBeDefined();
 	});
 
-	it('should fetch a user', async () => {
+	it('should fetch a user with findByID method', async () => {
 		const mockUser: user = {
 			id: '1',
 			name: 'John Doe',
@@ -41,6 +41,16 @@ describe('UsersService', () => {
 			where: {
 				id: '1',
 			},
+		});
+	});
+
+	it('should return null if no user with the given ID is found', async () => {
+		jest.spyOn(prismaService.user, 'findUnique').mockResolvedValue(null);
+
+		const result = await usersService.findByID('1');
+		expect(result).toBeNull();
+		expect(prismaService.user.findUnique).toHaveBeenCalledWith({
+			where: { id: '1' },
 		});
 	});
 });
